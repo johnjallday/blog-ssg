@@ -1,0 +1,15 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('/assets/johnjallday.png');
+  background-repeat: repeat;
+  background-size: 600px 250px;
+  background-position: 0 0;
+  opacity: 0.08;
+  pointer-events: none;
+}

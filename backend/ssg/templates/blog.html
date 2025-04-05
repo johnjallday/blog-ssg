@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog - Music & Dev Blog</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <h1>Blog</h1>
+        {{ template "nav" . }}
+      </div>
+      <div class="header-right">
+        {{ template "contact" . }}
+      </div>
+    </header>
+    <main>
+      <p>Welcome to my blog. Here you'll find my latest articles and tutorials on music, development, and more.</p>
+      <p>Stay tuned for updates!</p>
+      <section class="blog-posts">
+        <ul>
+          {{range .}}
+            <li><a href="/posts/{{.Slug}}.html">{{.Title}}</a></li>
+          {{else}}
+            <li>No posts found.</li>
+          {{end}}
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

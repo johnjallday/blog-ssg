@@ -1,0 +1,21 @@
+{{/* In master.html */}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music & Dev Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  {{ template "contact" . }}
+  <div class="container">
+    {{ .Portfolio }}
+    {{ .Blog }}
+    {{ .MusicTools }}
+    {{ .DevTools }}
+  </div>
+  <footer>
+    <!-- Optional footer content -->
+  </footer>
+</body>
+</html>

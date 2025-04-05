@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+        .background-text {
+          font-family: 'Capture It';
+          font-size: 80px;
+          fill: rgba(255, 255, 255, 0.1);
+          text-anchor: middle;
+        }
+      ]]>
+    </style>
+  </defs>
+  <text x="50%" y="50%" dy=".35em" class="background-text">johnj allday</text>
+</svg>

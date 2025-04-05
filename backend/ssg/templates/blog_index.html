@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog - Music & Dev Blog</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Blog Posts</h1>
+      <a href="/">Home</a>
+    </header>
+    <section>
+      <ul>
+        {{range .}}
+          <li><a href="/post?slug={{.Slug}}">{{.Title}}</a></li>
+        {{else}}
+          <li>No posts found.</li>
+        {{end}}
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
