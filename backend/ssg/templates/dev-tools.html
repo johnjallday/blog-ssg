@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog - Music & Dev Blog</title>
+  <title>Dev Tools</title>
   <link rel="stylesheet" href="/styles.css">
   <style>
     main {
@@ -16,7 +16,7 @@
       flex: 2;
     }
 
-    .blog-posts {
+    .tools-sidebar {
       flex: 1;
       max-width: 300px;
       background-color: rgba(255, 255, 255, 0.05);
@@ -25,23 +25,23 @@
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
 
-    .blog-posts ul {
+    .tools-sidebar ul {
       padding-left: 0;
       list-style: none;
     }
 
-    .blog-posts li {
+    .tools-sidebar li {
       margin-bottom: 10px;
     }
 
-    .blog-posts a {
+    .tools-sidebar a {
       color: #ffd700;
       font-weight: bold;
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
-    .blog-posts a:hover {
+    .tools-sidebar a:hover {
       color: #ff4081;
     }
   </style>
@@ -50,7 +50,7 @@
   <div class="container">
     <header class="header">
       <div class="header-left">
-        <h1>Blog</h1>
+        <h1>Dev Tools</h1>
         {{template "nav" .}}
       </div>
       <div class="header-right">
@@ -60,16 +60,17 @@
 
     <main>
       <div class="main-content">
-        <p>Welcome to my blog. Here you'll find my latest articles and tutorials on music, development, and more.</p>
-        <p>Stay tuned for updates!</p>
+        <p>Welcome to the dev tools page. Here you'll find utilities, tools, and resources I’ve built to speed up development and make coding more fun.</p>
+        <p>Check back often for new additions!</p>
       </div>
 
-      <section class="blog-posts">
+      <section class="tools-sidebar">
+        <h2>Featured Tools</h2>
         <ul>
-          {{range .}}
-            <li><a href="/blog/posts/{{.Slug}}">{{.Title}}</a></li>
+          {{range .Tools}}
+            <li><a href="{{.Link}}">{{.Name}}</a></li>
           {{else}}
-            <li>No posts found.</li>
+            <li>No tools available.</li>
           {{end}}
         </ul>
       </section>

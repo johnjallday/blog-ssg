@@ -322,9 +322,108 @@ func CopyAssets() {
 	log.Println("Assets copied successfully!")
 }
 
+// AddStyle copies the styles.css file to the public directory.
+func AddStyle() {
+	src := filepath.Join("backend", "ssg", "templates", "styles.css")
+	dst := filepath.Join("public", "styles.css")
+
+	if err := copyFile(src, dst); err != nil {
+		log.Fatalf("Error copying styles.css: %v", err)
+	}
+	log.Println("styles.css copied successfully!")
+}
+
+// BuildMusicTools generates the music tools page.
+func BuildMusicTools() {
+	// Optional: define some dynamic data if needed in the future
+	type MusicToolsData struct {
+		Tools []struct {
+			Name string
+			Link string
+		}
+	}
+
+	// Static for now — feel free to make it dynamic later
+	data := MusicToolsData{
+		Tools: []struct {
+			Name string
+			Link string
+		}{
+			{"BeatMaker", "/assets/tools/beatmaker.zip"},
+			{"Chord Generator", "/assets/tools/chordgen.zip"},
+			{"Synth Pack", "/assets/tools/synthpack.zip"},
+		},
+	}
+
+	// Parse the required templates
+	tmpl, err := template.ParseFiles(
+		filepath.Join("backend", "ssg", "templates", "music-tools.html"),
+		filepath.Join("backend", "ssg", "templates", "nav.html"),
+		filepath.Join("backend", "ssg", "templates", "contact.html"),
+	)
+	if err != nil {
+		log.Fatalf("Error parsing music tools template: %v", err)
+	}
+
+	// Create the output file
+	out, err := os.Create(filepath.Join("public", "music-tools.html"))
+	if err != nil {
+		log.Fatalf("Error creating music-tools.html: %v", err)
+	}
+	defer out.Close()
+
+	// Render the page with the provided data
+	if err := tmpl.Execute(out, data); err != nil {
+		log.Fatalf("Error executing music tools template: %v", err)
+	}
+
+	log.Println("public/music-tools.html built successfully!")
+}
+
+// BuildDevTools generates the dev tools page.
+func BuildDevTools() {
+	type DevToolsData struct {
+		Tools []struct {
+			Name string
+			Link string
+		}
+	}
+
+	data := DevToolsData{
+		Tools: []struct {
+			Name string
+			Link string
+		}{
+			{"Code Snippet Manager", "/assets/tools/snippet-manager.zip"},
+			{"Regex Tester", "/assets/tools/regex-tester.zip"},
+			{"JSON Formatter", "/assets/tools/json-formatter.zip"},
+		},
+	}
+
+	tmpl, err := template.ParseFiles(
+		filepath.Join("backend", "ssg", "templates", "dev-tools.html"),
+		filepath.Join("backend", "ssg", "templates", "nav.html"),
+		filepath.Join("backend", "ssg", "templates", "contact.html"),
+	)
+	if err != nil {
+		log.Fatalf("Error parsing dev tools template: %v", err)
+	}
+
+	out, err := os.Create(filepath.Join("public", "dev-tools.html"))
+	if err != nil {
+		log.Fatalf("Error creating dev-tools.html: %v", err)
+	}
+	defer out.Close()
+
+	if err := tmpl.Execute(out, data); err != nil {
+		log.Fatalf("Error executing dev tools template: %v", err)
+	}
+
+	log.Println("public/dev-tools.html built successfully!")
+}
+
 // BuildAll runs all build functions.
 func BuildAll() {
-	// Ensure the public directory exists.
 	if err := os.MkdirAll("public", os.ModePerm); err != nil {
 		log.Fatalf("Error creating public directory: %v", err)
 	}
@@ -334,6 +433,8 @@ func BuildAll() {
 	BuildBlog()
 	BuildPosts()
 	BuildBlogIndex()
-	// AddStyle()
+	BuildMusicTools()
+	BuildDevTools()
+	AddStyle()
 	CopyAssets()
 }

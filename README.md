@@ -1,4 +1,4 @@
-# Allday Music Blog
+# Allday Music Blog Static Site Generator
 
 A blog for Allday Music built with Go.
 
