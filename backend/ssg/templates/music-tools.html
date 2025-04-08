@@ -1,78 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Music Tools</title>
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    main {
-      display: flex;
-      flex-direction: row;
-      gap: 40px;
-      align-items: flex-start;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Music Tools</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      main {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+      }
 
-    .main-content {
-      flex: 2;
-    }
+      .main-content {
+        flex: 2;
+      }
 
-    .tools-sidebar {
-      flex: 1;
-      max-width: 300px;
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    }
+      .tools-sidebar {
+        flex: 1;
+        max-width: 300px;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
 
-    .tools-sidebar ul {
-      padding-left: 0;
-      list-style: none;
-    }
+      .tools-sidebar ul {
+        padding-left: 0;
+        list-style: none;
+      }
 
-    .tools-sidebar li {
-      margin-bottom: 10px;
-    }
+      .tools-sidebar li {
+        margin-bottom: 10px;
+      }
 
-    .tools-sidebar a {
-      color: #ffd700;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+      .tools-sidebar a {
+        color: #ffd700;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
 
-    .tools-sidebar a:hover {
-      color: #ff4081;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="header-left">
-        <h1>Music Tools</h1>
-        {{template "nav" .}}
-      </div>
-      <div class="header-right">
-        {{template "contact" .}}
-      </div>
-    </header>
+      .tools-sidebar a:hover {
+        color: #ff4081;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-left">
+          <h1>Music Tools</h1>
+          {{template "nav" .}}
+        </div>
+        <div class="header-right">{{template "contact" .}}</div>
+      </header>
 
-    <main>
-      <div class="main-content">
-        <p>Welcome to the music tools page. Here you'll find my custom instruments, software plugins, and production utilities.</p>
-        <p>More tools and downloads will be added over time!</p>
-      </div>
+      <main>
+        <div class="main-content">
+          <p>
+            Welcome to the music tools page. Here you'll find my custom
+            instruments, software plugins, and production utilities.
+          </p>
+          <p>More tools and downloads will be added over time!</p>
+        </div>
 
-      <section class="tools-sidebar">
-        <h2>Featured Tools</h2>
-        <ul>
-          <li><a href="/assets/tools/beatmaker.zip">BeatMaker</a></li>
-          <li><a href="/assets/tools/chordgen.zip">Chord Generator</a></li>
-          <li><a href="/assets/tools/synthpack.zip">Synth Pack</a></li>
-        </ul>
-      </section>
-    </main>
-  </div>
-</body>
+        <section class="tools-sidebar">
+          <h2>Featured Tools</h2>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/johnjallday/reaper-tools"
+                target="_blank"
+                >Reaper Tools</a
+              >
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

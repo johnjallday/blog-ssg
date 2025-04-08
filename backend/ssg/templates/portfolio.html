@@ -1,48 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="/styles.css" />
-  <style>
-    /* Center the container content */
-    .container {
-      text-align: center;
-    }
-    /* Center each playlist container and limit its width */
-    .playlist-container {
-      margin: 20px auto;
-      display: inline-block;
-      text-align: left; /* Ensures inner content like the iframe stays neatly formatted */
-      max-width: 600px;
-    }
-    /* Center the iframe within its container */
-    .playlist-container iframe {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Center the container content */
+      .container {
+        text-align: center;
+      }
+      /* Center each playlist container and limit its width */
+      .playlist-container {
+        margin: 20px auto;
+        display: inline-block;
+        text-align: left; /* Ensures inner content like the iframe stays neatly formatted */
+        max-width: 600px;
+      }
+      /* Center the iframe within its container */
+      .playlist-container iframe {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
-  <header>
-        {{ template "nav" . }}
-  </header>
-<body>
-  <div class="container">
-    <header>
-      <h1>My Portfolio</h1>
-      <p>Check out my YouTube playlists below:</p>
-    </header>
-    <section class="playlists">
-      <div class="playlist-container">
-        <h3>Produced/Written</h3>
-        {{.Playlist1}}
-      </div>
-      <div class="playlist-container">
-        <h3>Mix</h3>
-        {{.Playlist2}}
-      </div>
-    </section>
-  </div>
-</body>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <h1>Portfolio</h1>
+          {{template "nav" .}}
+        </div>
+        <div class="header-right">{{template "contact" .}}</div>
+      </header>
+      <section class="playlists">
+        <div class="playlist-container">
+          <h3>Produced/Written</h3>
+          {{.Playlist1}}
+        </div>
+        <div class="playlist-container">
+          <h3>Mix</h3>
+          {{.Playlist2}}
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

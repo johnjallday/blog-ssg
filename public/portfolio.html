@@ -1,31 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="/styles.css" />
-  <style>
-     
-    .container {
-      text-align: center;
-    }
-     
-    .playlist-container {
-      margin: 20px auto;
-      display: inline-block;
-      text-align: left;  
-      max-width: 600px;
-    }
-     
-    .playlist-container iframe {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+       
+      .container {
+        text-align: center;
+      }
+       
+      .playlist-container {
+        margin: 20px auto;
+        display: inline-block;
+        text-align: left;  
+        max-width: 600px;
+      }
+       
+      .playlist-container iframe {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
   </head>
-  <header>
-        
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <h1>Portfolio</h1>
+          
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
@@ -36,27 +40,51 @@
   </ul>
 </nav>
 
-  </header>
-<body>
-  <div class="container">
-    <header>
-      <h1>My Portfolio</h1>
-      <p>Check out my YouTube playlists below:</p>
-    </header>
-    <section class="playlists">
-      <div class="playlist-container">
-        <h3>Produced/Written</h3>
-        <div class="playlist">
+        </div>
+        <div class="header-right">
+<div class="contact-bar">
+  <a href="/" title="Home">
+    <img src="/assets/assets/home.svg" alt="Home Button"
+    style="width: 24px; height: 24px" />
+  </a>
+  <a href="https://instagram.com/johnj.alldayok" target="_blank">
+    <img
+      src="/assets/assets/Instagram_Glyph_White.svg"
+      alt="Instagram"
+      style="width: 24px; height: 24px"
+    />
+  </a>
+  <a href="https://github.com/johnjallday" target="_blank">
+    <img
+      src="assets/assets/github-mark-white.svg"
+      alt="Github"
+      style="width: 24px; height: 24px"
+    />
+  </a>
+  <a href="mailto:johnj.alldayok@gmail.com">
+    <img
+      src="/assets/assets/email.svg"
+      alt="Email"
+      style="width: 24px; height: 24px"
+    />
+  </a>
+</div>
+</div>
+      </header>
+      <section class="playlists">
+        <div class="playlist-container">
+          <h3>Produced/Written</h3>
+          <div class="playlist">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXmbGsvEq-1DqQtHyOqedD8dfUGbWLrR5" frameborder="0" allowfullscreen></iframe>
 </div>
-      </div>
-      <div class="playlist-container">
-        <h3>Mix</h3>
-        <div class="playlist">
+        </div>
+        <div class="playlist-container">
+          <h3>Mix</h3>
+          <div class="playlist">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXmbGsvEq-1D37iuSB7Cahw-HuMB2_Wa6" frameborder="0" allowfullscreen></iframe>
 </div>
-      </div>
-    </section>
-  </div>
-</body>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
