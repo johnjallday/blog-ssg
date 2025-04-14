@@ -81,7 +81,7 @@ func BuildPosts() {
 		log.Fatalf("Error parsing posts template: %v", err)
 	}
 
-	outDir := filepath.Join("public", "posts")
+	outDir := filepath.Join("public", "blog", "posts")
 	if err := os.MkdirAll(outDir, os.ModePerm); err != nil {
 		log.Fatalf("Error creating posts output directory: %v", err)
 	}

@@ -14,12 +14,15 @@
 
       .main-content {
         flex: 2;
+        background-color: #1b1b1a;  
+        padding: 20px;
+        border-radius: 12px;
       }
 
       .blog-posts {
         flex: 1;
         max-width: 300px;
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: #1b1b1a;  
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -76,33 +79,33 @@
 
         </div>
         <div class="header-right">
-<div class="contact-bar">
-  <a href="/" title="Home">
-    <img src="/assets/assets/home.svg" alt="Home Button"
-    style="width: 24px; height: 24px" />
-  </a>
-  <a href="https://instagram.com/johnj.alldayok" target="_blank">
-    <img
-      src="/assets/assets/Instagram_Glyph_White.svg"
-      alt="Instagram"
-      style="width: 24px; height: 24px"
-    />
-  </a>
-  <a href="https://github.com/johnjallday" target="_blank">
-    <img
-      src="assets/assets/github-mark-white.svg"
-      alt="Github"
-      style="width: 24px; height: 24px"
-    />
-  </a>
-  <a href="mailto:johnj.alldayok@gmail.com">
-    <img
-      src="/assets/assets/email.svg"
-      alt="Email"
-      style="width: 24px; height: 24px"
-    />
-  </a>
-</div>
+  <nav class="contact-bar">
+    <a href="/" title="Home">
+      <img src="/assets/assets/home.svg" alt="Home Button"
+      style="width: 24px; height: 24px" />
+    </a>
+    <a href="https://instagram.com/johnj.alldayok" target="_blank">
+      <img
+        src="/assets/assets/Instagram_Glyph_White.svg"
+        alt="Instagram"
+        style="width: 24px; height: 24px"
+      />
+    </a>
+    <a href="https://github.com/johnjallday" target="_blank">
+      <img
+        src="assets/assets/github-mark-white.svg"
+        alt="Github"
+        style="width: 24px; height: 24px"
+      />
+    </a>
+    <a href="mailto:johnj.alldayok@gmail.com">
+      <img
+        src="/assets/assets/email.svg"
+        alt="Email"
+        style="width: 24px; height: 24px"
+      />
+    </a>
+  </nav>
 </div>
       </header>
 
@@ -121,8 +124,16 @@
 <p>This ended up being a Static Site Generator for now.<br />
 I wanted to build a website and make it more integrated to my computer.<br />
 Hopefully you'll see the progress of this website grow down the line.</p>
-<p>If you want the full source code for this static website generator,<br />
-I'll post and share the updates via this website, and you'll see how this gets integrated.</p>
+<p>What is a Static Site Generator?</p>
+<p>A Static Site Generator (SSG) is a tool that converts source content — typically written in Markdown or a similar format — into static HTML, CSS, and JavaScript files. Unlike dynamic websites that rely on server-side processing for each request, an SSG pre-builds pages during a build step, allowing them to be served quickly and securely.</p>
+<p>Some key advantages of using an SSG include:</p>
+<ul>
+<li><strong>Performance:</strong> Pre-built files load faster since there's no server-side processing for each page request.</li>
+<li><strong>Security:</strong> With no dynamic content generation at runtime, the attack surface is significantly reduced.</li>
+<li><strong>Simplicity:</strong> Write content in Markdown; let the generator handle templating and building.</li>
+<li><strong>Scalability:</strong> Static assets are easy to cache and can handle large amounts of traffic without heavy backend infrastructure.</li>
+<li><strong>Maintenance:</strong> Fewer moving parts relative to traditional CMS or dynamic server architectures, simplifying updates and deployments.</li>
+</ul>
 <p>Checkout:<br />
 <a href="https://github.com/johnjallday/blog-ssg">https://github.com/johnjallday/blog-ssg</a></p>
 </div>
