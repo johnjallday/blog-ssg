@@ -1,0 +1,1 @@
+- [x] new york svg integration #created:2025-04-15 #project:blog #workspace:Allday-Music #completed:2025-04-17

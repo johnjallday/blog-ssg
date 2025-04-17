@@ -15,14 +15,19 @@ func main() {
 	ssg.BuildAll()
 	fmt.Println("Build completed.")
 
-	// Commit and push the changes to Git.
-	if err := GitCommitAndPush(); err != nil {
+	// Commit and push the changes to Git inside the public folder.
+	if err := GitCommitAndPush("public"); err != nil {
 		fmt.Printf("Error: %v\n", err)
 	}
 }
 
-// GitCommitAndPush automates git add, commit, and push
-func GitCommitAndPush() error {
+// GitCommitAndPush automates git add, commit, and push inside a specific folder
+func GitCommitAndPush(folder string) error {
+	// Change the working directory to the specified folder
+	if err := os.Chdir(folder); err != nil {
+		return fmt.Errorf("failed to change directory to '%s': %w", folder, err)
+	}
+
 	reader := bufio.NewReader(os.Stdin)
 
 	// Ask for a commit message

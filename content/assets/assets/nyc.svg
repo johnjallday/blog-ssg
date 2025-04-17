@@ -1,0 +1,35 @@
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="200" fill="#141d26"/>
+  <!-- Buildings -->
+  <rect x="30" y="110" width="40" height="90" fill="#314455"/>
+  <rect x="75" y="90" width="35" height="110" fill="#3a506b"/>
+  <rect x="120" y="130" width="25" height="70" fill="#5bc0be"/>
+  <rect x="155" y="80" width="50" height="120" fill="#249ea0"/>
+  <rect x="210" y="60" width="30" height="140" fill="#314455"/>
+  <rect x="245" y="100" width="28" height="100" fill="#3a506b"/>
+  <rect x="280" y="70" width="50" height="130" fill="#22223b"/>
+  
+  <!-- Empire State Building -->
+  <rect x="340" y="30" width="30" height="170" fill="#9ba4b0"/>
+  <rect x="352" y="15" width="6" height="15" fill="#c9c9c9"/>
+  <rect x="354" y="8" width="2" height="7" fill="#eeeeee"/>
+  
+  <!-- One World Trade Center -->
+  <polygon points="400,90 410,30 420,90" fill="#5bc0be"/>
+  <rect x="410" y="90" width="20" height="110" fill="#22223b"/>
+  
+  <!-- Other buildings -->
+  <rect x="435" y="120" width="38" height="80" fill="#314455"/>
+  <rect x="480" y="110" width="22" height="90" fill="#3a506b"/>
+  <rect x="506" y="140" width="28" height="60" fill="#5bc0be"/>
+  <rect x="540" y="115" width="25" height="85" fill="#249ea0"/>
+  <rect x="570" y="130" width="18" height="70" fill="#314455"/>
+  
+  <!-- Windows (simple dots) -->
+  <circle cx="355" cy="55" r="1.5" fill="#ffe066"/>
+  <circle cx="355" cy="65" r="1.5" fill="#ffe066"/>
+  <circle cx="415" cy="120" r="1" fill="#ffe066"/>
+  <circle cx="415" cy="140" r="1" fill="#ffe066"/>
+  <circle cx="285" cy="110" r="1.2" fill="#ffe066"/>
+  <circle cx="295" cy="120" r="1.2" fill="#ffe066"/>
+</svg>
